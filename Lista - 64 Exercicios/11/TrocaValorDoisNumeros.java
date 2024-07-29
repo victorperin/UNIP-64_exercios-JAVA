@@ -7,29 +7,27 @@
 
 import java.util.Scanner;
 
-public class Exercicio {
+/**
+ * TrocaValorDoisNumeros
+ */
+public class TrocaValorDoisNumeros {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int A,B,VariavelTemporaria;
+        int a, b, variavelTemporaria;
 
-      	System.out.print("Efetuador de troca de valores entre variaveis\n\n"); //Isso é estrutura condicional, mesmo?
+        System.out.println("Efetuador de troca de valores entre variaveis\n\n");
 
+        System.out.println("Digite a variável A:");
+        a = entrada.nextInt();
 
-      	System.out.print("Digite a variável A:  ");
-      	A = entrada.nextInt();
+        System.out.println("Digite a variavel B: ");
+        b = entrada.nextInt();
 
-      	System.out.print("Digite a variável B: ");
-      	B = entrada.nextInt();
+        variavelTemporaria = a;
+        a = b;
+        b = variavelTemporaria;
 
-
-
-      	VariavelTemporaria = A;
-        A = B;
-        B = VariavelTemporaria;
-
-        System.out.print("A="+A+" | B="+B+"\n");
-
+        System.out.println("A = " + a + " B = " + b + "\n");
     }
-
 }
