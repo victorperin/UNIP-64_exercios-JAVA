@@ -7,23 +7,22 @@
 
 import java.util.Scanner;
 
-public class Exercicio {
+/**
+ * ExibirModulo
+ */
+public class ExibirModulo {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int Numero,ModuloNumero;
+        int numero, moduloNumero;
 
-      	System.out.print("Módulo de Número\n\n"); //Finalmente...
-
-
-      	System.out.print("Digite um número inteiro:  ");
-      	Numero = entrada.nextInt();
+        System.out.println("Modulo de numero \n\n"); //Finalmente...
+        numero = entrada.nextInt();
 
 
-      	ModuloNumero = (Numero < 0)? ModuloNumero = Numero*(-1):Numero;
+        moduloNumero = (numero < 0)? moduloNumero = numero*(-1):numero;
 
-        System.out.print("O módulo do número é "+ModuloNumero+"\n");
-
+        System.out.println("O modulo do numero é " + moduloNumero + "\n");
     }
 
 }
