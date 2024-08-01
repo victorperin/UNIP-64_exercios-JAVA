@@ -8,34 +8,32 @@
 
 import java.util.Scanner;
 
-public class Exercicio {
+/**
+ * VerificarCodigo
+ */
+public class VerificarCodigo {
 
-    public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int CODIGO;
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		int codigo; 
 
-      	System.out.print("Verificador de Código\n\n");
+		System.out.println("Verificador de código\n\n");
 
+		System.out.println("Digite o código: ");
+		codigo = entrada.nextInt();
 
-        System.out.print("Digite o Código:  ");
-        CODIGO = entrada.nextInt();
-
-
-
-        switch(CODIGO){
-			case 1:
-				System.out.println("um");
-				break;
-			case 2:
-				System.out.println("dois");
-				break;
-			case 3:
-				System.out.println("três");
-				break;
-			default:
-				System.out.println("Código inválido");
+		switch (codigo) {
+				case 1: 
+					System.out.println("um");
+					break;
+				case 2:
+					System.out.println("dois");
+					break;
+				case 3:
+					System.out.println("três");
+					break;
+				default:
+					System.out.println("Códig inválido");	
 		}
-
-    }
-
+	}
 }
