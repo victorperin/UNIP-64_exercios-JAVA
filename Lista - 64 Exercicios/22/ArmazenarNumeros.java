@@ -22,7 +22,7 @@ public class ArmazenarNumeros {
         System.out.println("Organizador de numeros \n\n");
         
             do {
-                System.out.println("Digite um numero, s digite 0 se quiser sair do programa");
+                System.out.println("Digite um numero, digite 0 se quiser sair do programa");
                  numero = entrada.nextInt();
                 if (numero > 0) {   
                     a.add(numero);
