@@ -44,7 +44,7 @@ public class MediaAlunos {
             MediaAlunos mediaAlunos = new MediaAlunos();
              mediaAlunos.adicionarAluno(numeroMatricula, notaProva);
         
-
+            
             for (Aluno i : alunoList) {
                 if(notaProva >= 0)
                 soma += i.getNotaProva();
