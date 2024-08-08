@@ -8,40 +8,44 @@
 * rodar quando o usuário responder "S" na seguinte pergunta, "Deseja encerrar o
 * programa?".
 *******************************************************************************/
+
 import java.util.Scanner;
 
-public class Exercicio {
-	private static double primeiro, segundo;
+/**
+ * CalculoSalario
+ */
+public class CalculoSalario {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-		int C;
-		double N,E=0,PrecoHora,PrecoExcedente;
+		int c;
+		double n, e = 0, precoHora, precoExcedente;
 		boolean continuar = true;
 		char texto;
+	
+		do {
+			 e = 0;
+			 precoHora = 10;
+			 precoExcedente = precoHora * 2;
 
-		do{
-			E=0;
-			PrecoHora=10;
-			PrecoExcedente=PrecoHora*2;
+			 System.out.println("Digite o código do operario: ");
+			 c = entrada.nextInt();
 
-			System.out.print("Digite o código do operário: ");
-			C = entrada.nextInt();
+			 System.out.println("Digite o número de horas trabalhadas: ");
+			 n = entrada.nextDouble();
 
-			System.out.print("Digite o número de horas trabalhadas: ");
-			N = entrada.nextDouble();
+			 if (n > 50) {
+				
+				e = n - 50;
+			 }
 
-			if(N>50){
-				E = N-50;
-			}
-
-			System.out.println("\nID: "+C+"\nSalario: "+(N*PrecoHora)+"\nSalario excedente: "+(E*PrecoExcedente)+"\nSalario total: "+(E*PrecoExcedente+N*PrecoHora)+"\n\nDeseja encerrar o programa?(s/N) ");
-			texto = entrada.next().charAt(0);
-			if(texto == 's' || texto == 'S'){
-				continuar = false;
-			}
-
-		}while(continuar);
-
+			 System.out.println("\nID: " +c+ "\nSalario: " +(n*precoHora)+ " \nSalario excedente: " +(e*precoExcedente)+"\nSalario total: " +(e*precoExcedente+n*precoHora)+"\n\nDeseja encerrar o programa?(s/n)");
+			 texto = entrada.next().charAt(0);
+			 if (texto == 's' || texto == 'S') {
+					continuar = false;
+			 }
+		} while (continuar);
+	
 	}
+
 }
