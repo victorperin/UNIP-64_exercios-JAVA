@@ -26,7 +26,7 @@ public class ImprimirOrdemInversa {
 		}
 		
 		for (int j =quantidade-1; j >= 0; j--) {
-            System.out.println(numeros[j]);
+            System.out.printf(" %d ",numeros[j]);
         }
 		
 	}
