@@ -8,22 +8,24 @@
 * impossível efetuar o pagamento. Faça um programa para calcular o número de
 * grãos que o monge esperava receber.
 *******************************************************************************/
+
 import java.util.Scanner;
 
-public class Exercicio {
-	private static double primeiro, segundo;
+/**
+ * PagamentoEmGraos
+ */
+public class PagamentoEmGraos {
 
-	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
-		double graosCasa=1,casasTabuleiro=64;
-		int graos=1;
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        double graosCasa = 1, casasTabuleiro = 64;
+        int graos =1;
 
-		for(int x=1;x<casasTabuleiro;x++){
-			graosCasa = graosCasa*2;
-			graos +=graosCasa;
-		}
+        for(int x=1; x < casasTabuleiro; x++){
+            graosCasa = graosCasa*2;
+            graos += graosCasa;
+        }
 
-		System.out.println("\nO quantidade de grãos é: "+graos);
-
-	}
+        System.out.println("\nO quantidade de grãos é: " + graos);
+    }
 }
