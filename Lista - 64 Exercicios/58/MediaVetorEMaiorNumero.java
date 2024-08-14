@@ -33,7 +33,7 @@ public class MediaVetorEMaiorNumero {
         for (int i : numeros) {
             System.err.println(i);    
         }
-        System.out.println("A média dos valores é: " + media+ "\nO maior valor é: " + numeros[quantidade+1]);
+        System.out.println("A média dos valores é: " + media+ "\nO maior valor é: " + numeros[quantidade-1]);
 
     }
 }
