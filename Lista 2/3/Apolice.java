@@ -34,38 +34,43 @@ Para entrada de dados em java, temos que instanciar um objeto da Classe Scanner,
   }
 *******************************************************************************/
 
+/**
+ * Apolice
+ */
 public class Apolice {
+
 	private String nome;
 	private int idade;
 	private double valorPremio;
 
-	//Métodos construtores
-	public Apolice(String nome,int idade,double valorPremio){
+	public Apolice(String nome, int idade, double valorPremio){
 		this.nome = nome;
 		this.idade = idade;
 		this.valorPremio = valorPremio;
 	}
 	public void imprimir(){
-		System.out.println("Apólice:\n\tNome do Segurado: "+this.nome+"\n\tIdade do Segurado: "+this.idade+"\n\tValor do Premio da Apólice: "+valorPremio);
+		System.out.println("Apólce:\n\tNome do Segurado: "+this.nome+"\n\tIdade do Segurado: " +this.idade+"\n\tValor do Premio da Apólice: " + valorPremio);
 	}
 	public void calcularPremioApolice(){
-		if(idade>=18&&idade<=25) valorPremio+=(valorPremio*20)/100;
-		else if(idade>25&&idade<=36) valorPremio+=(valorPremio*15)/100; //parti do principio de que o professor escreveu errado...
-		else if(idade>36) valorPremio+=(valorPremio*10)/100;
+		if (idade >=18 && idade<=25) 
+		valorPremio += (valorPremio*20)/100;
+		else if (idade > 25 && idade <= 36) 
+		valorPremio += (valorPremio*15)/100;
+		else if(idade > 36)
+		valorPremio += (valorPremio*10)/100;
 	}
-	public void oferecerDesconto(String cidade){
-		switch(cidade){
+	public void oferecerDesconto(String cidade) {
+		switch (cidade) {
 			case "Rio de Janeiro":
-				valorPremio-=valorPremio*0.15;
+				valorPremio -=valorPremio*0.15;
 				break;
 			case "São Paulo":
-				valorPremio-=valorPremio*0.1;
+				valorPremio -=valorPremio*0.1;
 				break;
 			case "Belo Horizonte":
-				valorPremio-=valorPremio*0.05;
+				valorPremio -=valorPremio*0.05;
 				break;
 			default:
 		}
 	}
-
 }

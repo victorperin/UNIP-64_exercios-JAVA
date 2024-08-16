@@ -35,27 +35,35 @@ Para entrada de dados em java, temos que instanciar um objeto da Classe Scanner,
 *******************************************************************************/
 
 import java.util.Scanner;
-public class ApoliceTeste{
-  public static void main(String args[]){
-    Scanner input = new Scanner(System.in);
-    System.out.print("Digite o nome: ");
-    String nome = input.nextLine();
-    System.out.print("Digite a idade: ");
-    int idade = Integer.parseInt(input.nextLine());
-    System.out.print("Digite o Valor do Premio da Apólice: ");
-    double valorPremio = Double.parseDouble(input.nextLine());
+
+/**
+ * ApoliceTeste
+ */
+public class ApoliceTeste {
+
+    public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
+
+      System.out.println("Digite o Nome: ");
+      String nome = input.nextLine();
+
+      System.out.println("Digite a idade: ");
+      int idade = Integer.parseInt(input.nextLine());
+      System.out.println("Digite o Valor do premio da Apólice");
+      double valorPremio = Double.parseDouble(input.nextLine());
 
 
-    Apolice bacon = new Apolice(nome,idade,valorPremio);
-    bacon.imprimir();
+      Apolice bacon = new Apolice(nome, idade, valorPremio);
+      bacon.imprimir();
 
+      bacon.calcularPremioApolice();
 
-    bacon.calcularPremioApolice();
+      System.out.println("Digite a cidade: ");
+      String cidade = input.nextLine();
+      bacon.oferecerDesconto(cidade);
 
-    System.out.print("Digite a cidade: ");
-    String cidade = input.nextLine();
-    bacon.oferecerDesconto(cidade);
+      bacon.imprimir();
 
-    bacon.imprimir();
-  }
+    }
+
 }
