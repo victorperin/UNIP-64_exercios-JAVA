@@ -12,45 +12,53 @@ menu para o usuário:
 6 – Exibir a quantidade de lâmpadas acesas e apagadas
 0 - Sair
 
-*******************************************************************************/
-public class Lampada{
-	private String tipo,  cor, marca;
-	private int voltagem;
-	private double preco,potencia;
-	private boolean status;
+*******************************************************************************//**
+ * Lampada
+ */
+public class Lampada {
 
-	public Lampada(){}
-	public Lampada(String tipo, int voltagem, String cor, String marca, double preco, double potencia, boolean status){
-		this.tipo=tipo;
-		this.voltagem=voltagem;
-		this.cor=cor;
-		this.marca=marca;
-		this.preco=preco;
-		this.potencia=potencia;
-		this.status=status;
+	private String tipo;
+	private String cor;
+	private String marca;
+	private int voltagem;
+	private double preco;
+	private double potencia;
+	private boolean status;
+	
+	public Lampada(){
+	}
+
+	public Lampada(String tipo, String cor, String marca,int voltagem, double preco, double potencia, boolean status){
+		this.tipo = tipo;
+		this.cor = cor;
+		this.marca = marca;
+		this.voltagem = voltagem;
+		this.preco = preco;
+		this.potencia = potencia;
+		this.status = status;	
 	}
 
 	//getters
 	public String getTipo(){
-		return this.tipo;
-	}
-	public int getVoltagem(){
-		return this.voltagem;
+		return tipo;
 	}
 	public String getCor(){
-		return this.cor;
+		return cor;
 	}
 	public String getMarca(){
-		return this.marca;
+		return marca;
+	}
+	public int getVoltagem(){
+		return voltagem;
 	}
 	public double getPreco(){
-		return this.preco;
+		return preco;
 	}
 	public double getPotencia(){
-		return this.potencia;
+		return potencia;
 	}
 	public boolean getStatus(){
-		return this.status;
+		return status;
 	}
 
 	//setters
@@ -58,33 +66,34 @@ public class Lampada{
 		this.tipo=tipo;
 	}
 	public void setVoltagem(int voltagem){
-		this.voltagem=voltagem;
+		this.voltagem = voltagem;
 	}
 	public void setCor(String cor){
-		this.cor=cor;
+		this.cor = cor;
 	}
 	public void setMarca(String marca){
-		this.marca=marca;
+		this.marca = marca;
 	}
 	public void setPreco(double preco){
-		this.preco=preco;
+		this.preco = preco;
 	}
-	public void setPotencia(double potencia){
-		this.potencia=potencia;
+	public void serPotencial(double potencia){
+		this.potencia = potencia;
 	}
 	public void setStatus(boolean status){
-		this.status=status;
+		this.status = status;
 	}
+
 	//toString
 	public String toString(){
 		String texto = "Lâmpada:";
-		texto += "\n\tTipo: "+this.tipo;
-		texto += "\n\tVoltagem: "+this.voltagem;
-		texto += "\n\tCor: "+this.cor;
-		texto += "\n\tMarca: "+this.marca;
-		texto += "\n\tPreco: "+this.preco;
-		texto += "\n\tPotência: "+this.potencia;
-		texto += "\n\tStatus: "+this.status;
+		texto +="\n\tTipo: " + tipo;
+		texto +="\n\tVoltagem: " + voltagem;
+		texto +="\n\tCor: " + cor;
+		texto +="\n\tMarca: " + marca;
+		texto +="\n\tPreço: " + preco;
+		texto +="\n\tPotência: " + potencia;
+		texto +="\n\tStatus: " + status;
 		return texto;
 	}
 
@@ -92,6 +101,7 @@ public class Lampada{
 	public void ascender(){
 		setStatus(true);
 	}
+
 	public void apagar(){
 		setStatus(false);
 	}
