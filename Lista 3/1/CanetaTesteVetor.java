@@ -35,7 +35,7 @@ public class CanetaTesteVetor {
 
           switch (opcoes) {
             case 1:
-              if(quantidadeCanetas>=5){
+              if(quantidadeCanetas>=50){
                 System.out.println("Já existem muitas canetas. ");
               }else{
                 String marca, cor;
