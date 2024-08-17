@@ -10,43 +10,54 @@ O programa deverá exibir o seguinte menu para o usuário:
 4–Consultar quantidade de canetas de uma determinada cor (digitada pelo usuário)
 0-Sair
 *******************************************************************************/
+/**
+ * Caneta
+ */
+public class Caneta {
 
-public class Caneta{
-  private String marca, cor;
+  private String marca;
+  private String cor;
   private int tamanho;
 
-  public Caneta(){}
-  public Caneta(String marca, String cor, int tamanho){
+  public Caneta(){
+  }
+
+   public Caneta(String marca, String cor, int tamanho){
     this.marca = marca;
     this.cor = cor;
     this.tamanho = tamanho;
-  }
+   }
 
-  //getters
-  public String getMarca(){
-    return this.marca;
-  }
-  public String getCor(){
-    return this.cor;
-  }
-  public int getTamanho(){
-    return this.tamanho;
-  }
+   //getters
+   public String getMarca(){
+    return marca;
+   }
 
-  //setters
-  public void setMarca(String marca){
+   public String getCor(){
+    return cor;
+   }
+
+   public int getTamanho(){
+    return tamanho;
+   }
+
+   //setters
+
+   public void setMarca( String marca){
     this.marca = marca;
-  }
-  public void setCor(String cor){
+   }
+    
+   public void setCor(String cor){
     this.cor = cor;
-  }
-  public void setTamanho(int tamanho){
+   }
+
+   public void setTamanho(int tamanho){
     this.tamanho = tamanho;
-  }
+   }
 
-  //toString
-  public String toString(){
-    return "Caneta\n\tTamanho: "+this.tamanho+"\n\tCor: "+this.cor+"\n\tTamanho: "+this.tamanho+"\n";
-  }
+   //toString
+   public String toString(){
+    return "Caneta\n\tTamanho: " + tamanho + "\n\tCor: " +cor+ "\n\tTamanho: " +tamanho+ "\n";
+   }
 
-}
+  }
