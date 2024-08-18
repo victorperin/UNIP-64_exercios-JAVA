@@ -8,27 +8,31 @@ toString deverá retornar uma string no seguinte formato “dia/mês/ano”, com
 
 *******************************************************************************/
 //obs: um ano é bissexto quando o mesmo é divisível por 4
+
 import java.util.Scanner;
 
-public class Exercicio{
+/**
+ * ValidarSeBissexto
+ */
+public class ValidarSeBissexto {
 
-	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
-		int dia,mes,ano;
-		System.out.print("Digite o dia: ");
-		dia = entrada.nextInt();
-		System.out.print("Digite o mês: ");
-		mes = entrada.nextInt();
-		System.out.print("Digite o ano: ");
-		ano = entrada.nextInt();
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int dia, mes, ano;
+        System.out.println("Digite o dia: ");
+        dia = entrada.nextInt();
+        System.out.println("Digite o mês ");
+        mes = entrada.nextInt();
+        System.out.println("Digite o ano: ");
+        ano = entrada.nextInt();
 
+        Data calendario = new Data(dia, mes, ano);
+        if (calendario.validarData(dia, mes, ano)) {
+            System.out.println(calendario.toString());
+        }else{
+            System.out.println("False");
+        }
+    }
+    
 
-
-		Data calendario = new Data(dia,mes,ano);
-		if(calendario.validarData(dia,mes,ano)){
-			System.out.print(calendario.getDia());
-		}else{
-			System.out.print("False");
-		}
-	}
 }
