@@ -1,30 +1,37 @@
 /*******************************************************************************
 Exercicio no arquivo de imagem.
 *******************************************************************************/
+/**
+ * Pessoa
+ */
+public class Pessoa {
 
-import java.util.Scanner;
+	String nome;
+	String sobrenome;
 
-public class Pessoa{
-	String nome,sobrenome;
-
-	//construtor
-	public Pessoa(String nome, String sobrenome){
+	public Pessoa(String nome, String sobrenome) {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 	}
 
-	//gets
+	//getters
 	public String getNome(){
-	 return this.nome;
+		return nome;
 	}
+
 	public String getSobrenome(){
-		return this.sobrenome;
+		return sobrenome;
 	}
-	//sets
-	public void setNome(String nome){
+
+	//setters
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setSobrenome(String sobrenome){
+
+	public void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
 	}
+
+
+
 }
