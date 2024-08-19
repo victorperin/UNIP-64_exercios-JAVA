@@ -1,37 +1,41 @@
 /*******************************************************************************
 Exercicio no arquivo de imagem.
 *******************************************************************************/
-import java.util.Scanner;
+/**
+ * PessoaJuridica
+ */
+public class PessoaJuridica extends Cliente {
 
-public class PessoaJuridica extends Cliente{
 	private String cnpj;
-	private String nomeFantasia;
+	private String nomeFantasia; 
 
-	//construtor
-	public PessoaJuridica(String nome, String endereco,String telefone,String cnpj,String nomeFantasia){
-		super(nome,endereco,telefone);
+	public PessoaJuridica(String nome, String endereco, String telefone, String cnpj, String nomeFantasia) {
+		super(nome, endereco, telefone);
 		this.cnpj = cnpj;
 		this.nomeFantasia = nomeFantasia;
 	}
 
-	//gets
-	public String getCnpj(){
-		return this.cnpj;
+	//getters
+	public String getcCnpf(){
+		return cnpj;
 	}
 	public String getNomeFantasia(){
-		return this.nomeFantasia;
+		return nomeFantasia;
 	}
 
-	//sets
+	//setters
 	public void setCnpj(String cnpj){
 		this.cnpj = cnpj;
 	}
-	public void setNomeFantasia(String nomeFantasia){
+	public void SetNomeFantasia(String nomeFantasia){
 		this.nomeFantasia = nomeFantasia;
 	}
 
 	//toString
-	public void ImprimirDados(){
-		System.out.println("Pessoa Física:\n\tNome: "+this.nome+"\n\tEndereço: "+this.endereco+"\n\tTelefone: "+this.telefone+"\n\tCNPJ: "+this.cnpj+"\n\tNome Fantasia: "+this.nomeFantasia);
+	@Override
+	public String toString() {
+		return "PessoaJuridica [cnpj=" + cnpj + ", nomeFantasia=" + nomeFantasia + ", getNome()=" + getNome()
+				+ ", getEndereco()=" + getEndereco() + ", getTelefone()=" + getTelefone() + "]";
 	}
+
 }
