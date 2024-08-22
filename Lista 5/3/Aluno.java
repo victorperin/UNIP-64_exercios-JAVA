@@ -12,30 +12,34 @@ manutenção). Para todos os empregados, nós devemos prever um campo salário e
 permita fixar os salários. Escreva, em linguagem JAVA, as declarações das classes que permitem
 representar esta hierarquia.
 *******************************************************************************/
-
+/**
+ * Aluno
+ */
 public class Aluno extends Pessoa{
+
   private String estatuto;
   private double media;
 
-  public Aluno(String nome,String estatuto,double media){
+  public Aluno(String nome, String estatuto, double media) {
     super(nome);
-    this.estatuto=estatuto;
-    this.media=media;
+    this.estatuto = estatuto;
+    this.media = media;
   }
 
   //getters
   public String getEstatuto(){
-    return this.estatuto;
+    return estatuto;
   }
   public double getMedia(){
-    return this.media;
-  }
+    return media;
+  } 
+  
 
   //setters
-  public void setEstatuto(String estatuto){
-    this.estatuto=estatuto;
+  public void setEstatuto(String estatuto) {
+     this.estatuto = estatuto;
   }
-  public void setMedia(double media){
-    this.media=media;
+  public void setMedia(double media) {
+    this.media = media;
   }
 }

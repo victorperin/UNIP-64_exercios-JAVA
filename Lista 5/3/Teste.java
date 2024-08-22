@@ -12,29 +12,33 @@ manutenção). Para todos os empregados, nós devemos prever um campo salário e
 permita fixar os salários. Escreva, em linguagem JAVA, as declarações das classes que permitem
 representar esta hierarquia.
 *******************************************************************************/
+/**
+ * Teste
+ */
+public class Teste {
 
-public class Teste{
-  public static void main(String[] args){
+  public static void main(String[] args) {
     Pessoa jose = new Pessoa("josé");
     System.out.println(jose.getNome());
 
-    Aluno marcos = new Aluno("marcos","especial",9.5);
+    Aluno marcos = new Aluno("marcos","especial", 9.5);
     System.out.println(marcos.getNome());
     System.out.println(marcos.getEstatuto());
     System.out.println(marcos.getMedia());
 
-    Empregado joao = new Empregado("João",5000.32);
+    Empregado joao = new Empregado("João",5002.5);
     System.out.println(joao.getNome());
     System.out.println(joao.getSalario());
 
-    Empregado mario = new Docente("Mario",102312.23,"professor");
+    Empregado mario = new Docente("Mario", 12000 ,  "professor");
     System.out.println(mario.getNome());
     System.out.println(mario.getSalario());
     System.out.println(mario.getTipo());
 
-    Empregado jackinsong = new Discente("jackinsong",300.23,"manutenção");
+    Empregado jackinsong = new Discente("jackinsong", 3000,"manutenção");
     System.out.println(jackinsong.getNome());
     System.out.println(jackinsong.getSalario());
     System.out.println(jackinsong.getTipo());
+
   }
 }
