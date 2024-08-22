@@ -7,7 +7,11 @@ Escreva uma classe Livro que represente os dados básicos de um livro.
     que pode ser emprestado a leitores.
 • Escreva também um programa que demonstre o uso destas classes.
 *******************************************************************************/
-public class LivroLivraria{
+/**
+ * LivroLivraria
+ */
+public class LivroLivraria {
+
   private Livro livro;
   private int quantidade;
   private float preco;
@@ -15,19 +19,21 @@ public class LivroLivraria{
   //construtores
   public LivroLivraria(Livro livro, float preco){
     this.livro = livro;
-    if(preco>=0.0f) this.preco = preco;
+    if (preco>= 0.0f) 
+        this.preco = preco;
   }
-  public LivroLivraria(Livro livro, float preco,int quantidade){
+  public LivroLivraria(Livro livro, float preco, int quantidade) {
     this.livro = livro;
-    if(preco>=0.0f) this.preco = preco;
-    this.quantidade = quantidade;
+    if (preco >= 0.0f) 
+        this.preco = preco;
+        this.quantidade = quantidade;
   }
 
   //getters
-  public String getNomeLivro(){
+  public String getNomeLivro() {
     return this.livro.getNome();
   }
-  public String getAutorLivro(){
+  public String getAutorLivro() {
     return this.livro.getAutor();
   }
   public String getDataLancamentoLivro(){
@@ -42,6 +48,8 @@ public class LivroLivraria{
 
   //setters
   public void setPreco(float novoPreco){
-    if(novoPreco>=0.0f) this.preco = novoPreco;
+    if (novoPreco >= 0.0f) 
+    this.preco = novoPreco;
   }
+
 }
