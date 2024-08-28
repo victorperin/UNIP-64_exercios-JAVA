@@ -1,37 +1,46 @@
 /*******************************************************************************
 Exercicio no arquivo de imagem.
 *******************************************************************************/
+/**
+ * Cliente
+ */
+public class Cliente {
 
-import java.util.Scanner;
+	private String nome;
+	private String endereco;
+	private String telefone;
 
-public class Cliente{
-	String nome,endereco,telefone;
-
-	//construtor
-	public Cliente(String nome, String endereco,String telefone){
+	public Cliente(String nome, String endereco, String telefone){
 		this.nome = nome;
 		this.endereco = endereco;
 		this.telefone = telefone;
 	}
+	
+	//getters
 
-	//gets
 	public String getNome(){
-	 return this.nome;
+		return nome;
 	}
+
 	public String getEndereco(){
-		return this.endereco;
+		return endereco;
 	}
 	public String getTelefone(){
-		return this.telefone;
+		return telefone;
 	}
-	//sets
-	public void setNome(String nome){
+
+	//setters
+
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setEndereco(String endereco){
+
+	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public void setTelefone(String telefone){
+
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
 }

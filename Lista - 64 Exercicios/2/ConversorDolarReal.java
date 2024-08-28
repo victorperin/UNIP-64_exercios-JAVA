@@ -6,26 +6,31 @@
  *    - Mostre o resultado
  *
  *************************************************************************/
+
 import java.util.Scanner;
 
-public class ConversorDolarReal {
-
+/**
+  * ConversorDolarReal
+  */
+ public class ConversorDolarReal {
+  
   public static void main(String[] args) {
+    
     Scanner entrada = new Scanner(System.in);
-    double cotacao_dolar, valor_dolar,valor_real;
+    double cotacaoDolar, valorDolar = 0, valorReal;
 
-    System.out.print("Conversor de dólar em real\n\n");
+    System.out.println("Conversor de dolar para real\n\n");
 
-    System.out.print("Digite a cotação do dolar: ");
-    cotacao_dolar = entrada.nextDouble();
+    System.out.println("Digite a cotação do dolar hoje: ");
+    cotacaoDolar = entrada.nextDouble();
 
-    System.out.print("Digite o valor em dolar: ");
-    valor_dolar = entrada.nextDouble();
+    System.out.println("Digite o valor em dolar: ");
+    valorDolar = entrada.nextDouble();
+    
+    valorReal = cotacaoDolar * valorDolar;
 
-    valor_real = cotacao_dolar * valor_dolar;
+    System.out.println("O valor em reais é " + valorReal + "\n");
 
-    System.out.print("O Valor em reais é " + valor_real + "\n");
-
-  }
-
-}
+    }
+  
+ }

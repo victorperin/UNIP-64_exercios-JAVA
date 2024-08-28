@@ -5,13 +5,16 @@ Escreva uma classe VeiculoAVenda que represente informações básicas sobre um 
 • Escreva uma classe MotocicletaAVenda que herde de VeiculoAVenda e que inicialize o campo tipo com o valor "Motocicleta".
 • Escreva também um programa que demonstre o uso destas classes usando Polimorfismo.
 *******************************************************************************/
+/**
+ * AutomovelAVenda
+ */
 public class AutomovelAVenda extends VeiculoAVenda{
 
-  public AutomovelAVenda(String tipo, int ano, float precoDeVenda){
-    super();
-    String automovelTipo = "Automóvel "+tipo;
-    super.setTipo(automovelTipo);
-    super.setAno(ano);
-    super.setPercodeVenda(precoDeVenda);
-  }
+    public AutomovelAVenda(String tipo, int ano, float precoDeVenda){
+        super();
+        String automovelTipo = "Automovel "+tipo;
+        super.setTipo(automovelTipo);
+        super.setAno(ano);
+        super.setPrecoVenda(precoDeVenda);
+    }         
 }

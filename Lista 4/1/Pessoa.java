@@ -8,22 +8,26 @@ e) Na classe Funcionário deverá existir um atributo Data de Admissão que deve
 f) Criar uma classe Teste com um menu para cadastrar aluno e funcionario.
 
 *******************************************************************************/
-import java.util.Scanner;
 
-public class Pessoa{
-	String nome, rg;
+/**
+ * Pessoa
+ */
+public class Pessoa {
+
+	String nome;
+	String rg;
 	Data dataNascimento;
 
 	//construtor
-	public Pessoa(String nome, String rg,String dataString){
+	public Pessoa(String nome, String rg, String dataString) {
 		this.nome = nome;
 		this.rg = rg;
 		this.dataNascimento = new Data(dataString);
 	}
 
-	//gets
+	//getters
 	public String getNome(){
-	 return this.nome;
+		return this.nome;
 	}
 	public String getRg(){
 		return this.rg;
@@ -32,11 +36,13 @@ public class Pessoa{
 		return this.dataNascimento.toString();
 	}
 
-	//sets
+	//setters
 	public void setNome(String nome){
 		this.nome = nome;
 	}
+
 	public void setRg(String rg){
 		this.rg = rg;
 	}
+
 }

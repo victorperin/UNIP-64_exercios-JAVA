@@ -1,24 +1,27 @@
 /*******************************************************************************
 Exercicio no arquivo de imagem.
 *******************************************************************************/
-import java.util.Scanner;
+/**
+ * Professor
+ */
+public class Professor extends Pessoa {
 
-public class Professor extends Pessoa{
 	private String disciplina;
 
-	//construtor
-	public Professor(String nome, String sobrenome,String disciplina){
-		super(nome,sobrenome);
+	//contructor
+	public Professor(String nome, String sobrenome, String disciplina) {
+		super(nome, sobrenome);
 		this.disciplina = disciplina;
 	}
 
-	//gets
-	public String getDisciplina(){
-		return this.disciplina;
+	//getters
+	public String getDisciplina() {
+		return disciplina;
 	}
 
-	//sets
-	public void setDisciplina(String disciplina){
+	//setters
+	public void setDisciplina(String disciplina) {
 		this.disciplina = disciplina;
 	}
+	
 }

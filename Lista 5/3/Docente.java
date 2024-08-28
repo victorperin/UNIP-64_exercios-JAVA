@@ -12,22 +12,24 @@ manutenção). Para todos os empregados, nós devemos prever um campo salário e
 permita fixar os salários. Escreva, em linguagem JAVA, as declarações das classes que permitem
 representar esta hierarquia.
 *******************************************************************************/
+/**
+ * Docente
+ */
+public class Docente extends Empregado {
 
-public class Docente extends Empregado{
-
-  public Docente(String nome,double salario,String tipo){
-    super(nome,salario);
+  public Docente(String nome, double salario, String tipo) {
+    super(nome, salario);
     setTipo(tipo);
   }
 
   //setters
   public void setTipoDocente(String tipo){
-    switch(tipo){
+    switch (tipo) {
       case "demonstrador":
       case "monitor":
       case "professor":
-        setTipo(tipo);
-        break;
+          setTipo(tipo);
+          break;
       default:
         System.out.println("Atenção, tipo de docente errado.");
     }

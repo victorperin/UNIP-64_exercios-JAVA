@@ -12,23 +12,26 @@ manutenção). Para todos os empregados, nós devemos prever um campo salário e
 permita fixar os salários. Escreva, em linguagem JAVA, as declarações das classes que permitem
 representar esta hierarquia.
 *******************************************************************************/
-
+/**
+ * Discente
+ */
 public class Discente extends Empregado{
 
-  public Discente(String nome,double salario,String tipo){
-    super(nome,salario);
+  public Discente(String nome, double salario, String tipo) {
+    super(nome, salario);
     setTipo(tipo);
   }
 
   //setters
   public void setTipoDiscente(String tipo){
-    switch(tipo){
+    switch (tipo) {
       case "escritorio":
       case "manutenção":
-        setTipo(tipo);
+        setTipo(tipo);  
         break;
       default:
         System.out.println("Atenção, tipo de discente errado.");
+        break;
     }
   }
 }

@@ -8,61 +8,73 @@ e) Na classe Funcionário deverá existir um atributo Data de Admissão que deve
 f) Criar uma classe Teste com um menu para cadastrar aluno e funcionario.
 
 *******************************************************************************/
-import java.util.Scanner;
-import java.util.List;
+
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class Teste{
+/**
+ * Teste
+ */
+public class Teste {
 
-	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
-		int opcao;
-		List<Aluno> alunos = new ArrayList<Aluno>();  //lista ordenada de aluno
-		List<Funcionario> funcionarios = new ArrayList<Funcionario>();  //lista ordenada de funcionarios
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int opcao;
+        List<Aluno> alunos = new ArrayList<Aluno>();
+        List<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
-		do{
-			System.out.print("Digite 1 para cadastrar um aluno e 2 para cadastrar um funcionário (3 para sair): ");
-			opcao = Integer.parseInt(entrada.nextLine());
-			switch(opcao){
-				case 1:
-					System.out.print("Digite o nome do Aluno: ");
-					String nomeAluno = entrada.nextLine();
-					System.out.print("Digite o RG do Aluno: ");
-					String rgAluno = entrada.nextLine();
-					System.out.print("Digite a data de nascimento do Aluno (string dia/mes/ano): ");
-					String dataNascimentoAluno =  entrada.nextLine();
-					System.out.print("Digite o RA do Aluno: ");
-					String ra = entrada.nextLine();
-					System.out.print("Digite a data da matricula do Aluno: ");
-					String dataMatricula = entrada.nextLine();
+        do {
+                System.out.println("""
+                        Digite
+                        1 - Para cadastrar um aluno
+                        2 - Para Cadatar um funcionario
+                        3 - Sair
+                        """);
+                        opcao = Integer.parseInt(entrada.nextLine());
 
-					alunos.add(new Aluno(nomeAluno,rgAluno,dataNascimentoAluno,ra,dataMatricula));
+                        switch (opcao) {
+                            case 1:
+                                    System.out.println("\nDigite o nome do Aluno: ");
+                                    String nomeAluno = entrada.nextLine();
+                                    System.out.println("\nDigite o RG do Aluno: ");
+                                    String rgaluno = entrada.nextLine();
+                                    System.out.println("\nDigite a data de nascimento do Aluno(string/ dia/mes/ano): ");
+                                    String dataNascimentoAluno = entrada.nextLine();
+                                    System.out.println("\nDigite o EA do Aluno: ");
+                                    String raAluno = entrada.nextLine();
+                                    System.out.println("\nDigite a data da matricula do Aluno: ");
+                                    String dataMatricula = entrada.nextLine();
 
-					break;
+                                    alunos.add(new Aluno(nomeAluno, rgaluno, dataNascimentoAluno, raAluno, dataMatricula));
+                                    break;
+                            case 2:
+                                    System.out.println("\nDigite o nome do funcionario: ");
+                                    String nomeFuncionario = entrada.nextLine();
+                                    System.out.println("\nDigite o RG do funcionario: ");
+                                    String rgluno = entrada.nextLine();
+                                    System.out.println("\nDigite a data de nascimento do funcionanrio (string/ dia/mes/ano): ");
+                                    String dataNascimentoFuncionario = entrada.nextLine();
+                                    System.out.println("\nDigite salario do funcionario: ");
+                                    double salario = Double.parseDouble(entrada.nextLine());
+                                    System.out.println("\nDigite a funcão do funcionário: ");
+                                    String funcao = entrada.nextLine();
 
-				case 2:
-					System.out.print("Digite o nome do funcionario: ");
-					String nomeFuncionario = entrada.nextLine();
-					System.out.print("Digite o RG do funcionario: ");
-					String rgFuncionario = entrada.nextLine();
-					System.out.print("Digite a data de nascimento do Funcionario (string dia/mes/ano): ");
-					String dataNascimentoFuncionario = entrada.nextLine();
-					System.out.print("Digite o salário do funcionário: ");
-					double salario = Double.parseDouble(entrada.nextLine());
-					System.out.print("Digite a função do funcionário: ");
-					String funcao = entrada.nextLine();
+                                    System.out.println("Digite a data de admissão do funcionário: ");
+                                    String dataAdmissao = entrada.nextLine();
 
-					System.out.print("Digite a data de admissao do funcionário: ");
-					String dataAdmissao = entrada.nextLine();
+                                    funcionarios.add(new Funcionario(nomeFuncionario, rgluno, dataNascimentoFuncionario, salario, funcao, dataAdmissao));
 
-					funcionarios.add(new Funcionario(nomeFuncionario,rgFuncionario,dataNascimentoFuncionario,salario,funcao,dataAdmissao));
+                                    break;
+                            case 3:
+                                    System.out.println("Saindo...");
+                                    break;
+                            default:
+                                System.out.println("Opção inválida");
+                        }
 
-					break;
-				case 3:
-					System.out.print("Saindo...");
-					break;
-				default: System.out.println("Opção inválida.");
-			}
-		}while(opcao!=3);
-	}
+        } while (opcao != 3);
+
+        
+    }
 }

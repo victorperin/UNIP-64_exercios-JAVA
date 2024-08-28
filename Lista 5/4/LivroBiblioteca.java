@@ -7,7 +7,11 @@ Escreva uma classe Livro que represente os dados básicos de um livro.
     que pode ser emprestado a leitores.
 • Escreva também um programa que demonstre o uso destas classes.
 *******************************************************************************/
-public class LivroBiblioteca{
+/**
+ * LivroBiblioteca
+ */
+public class LivroBiblioteca {
+
   private Livro livro;
   private boolean emprestado;
   private String leitor;
@@ -17,17 +21,19 @@ public class LivroBiblioteca{
     this.livro = livro;
     this.emprestado = false;
   }
+
   public LivroBiblioteca(Livro livro, String leitor){
     this.livro = livro;
     this.leitor = leitor;
     this.emprestado = true;
     Data dataAtual = new Data();
-    this.dataDevolucao = new Data((dataAtual.getDia()+7),dataAtual.getMes(),dataAtual.getAno());
+    this.dataDevolucao = new Data(dataAtual.getDia()+7, dataAtual.getMes(), dataAtual.getAno());
   }
-  public LivroBiblioteca(Livro livro, String leitor,String dataDevolucao){
+  
+  public LivroBiblioteca(Livro livro, String leitor, String dataDevolucao ){
     this.livro = livro;
     this.leitor = leitor;
-    this.emprestado = true;
+    this.emprestado=true;
     this.dataDevolucao = new Data(dataDevolucao);
   }
 
@@ -38,7 +44,7 @@ public class LivroBiblioteca{
   public String getAutorLivro(){
     return livro.getAutor();
   }
-  public String getDataLancamentoLivro(){
+  public String getDataLancamentoLivre(){
     return livro.getDataLancamento();
   }
   public String getResumoLivro(){
@@ -48,12 +54,14 @@ public class LivroBiblioteca{
     return this.emprestado;
   }
   public String getLeitor(){
-    if(this.emprestado) return this.leitor;
-    else return "O livro não foi emprestado";
+    if (this.emprestado) return this.leitor;
+    else 
+        return "O livro não foi emprestado";
   }
   public String getDataDevolucao(){
-    if(this.emprestado) return dataDevolucao.toString();
-    else return "O livro não foi emprestado";
+      if (this.emprestado) return dataDevolucao.toString();
+      else
+        return "O livro não foi empretado";
   }
 
   //setters
@@ -61,17 +69,16 @@ public class LivroBiblioteca{
     this.emprestado = false;
     this.leitor = "";
   }
+
   public void alugar(String nome){
     this.emprestado = true;
     this.leitor = nome;
     Data dataAtual = new Data();
-    this.dataDevolucao = new Data((dataAtual.getDia()+7),dataAtual.getMes(),dataAtual.getAno());
-  }
-  public void trocarLeitor(String nome){
-    this.leitor = nome;
+    this.dataDevolucao = new Data((dataAtual.getDia()+7), dataAtual.getMes(), dataAtual.getAno());
   }
   public void aumentarPrazoDevolucao(){
-    Data novaData = new Data((this.dataDevolucao.getDia()+7),this.dataDevolucao.getMes(),this.dataDevolucao.getAno());
-    this.dataDevolucao = novaData;
+    Data novData = new Data((this.dataDevolucao.getDia()+7), this.dataDevolucao.getMes(), this.dataDevolucao.getAno());
+    this.dataDevolucao = novData;
   }
+
 }

@@ -1,24 +1,26 @@
 /*******************************************************************************
 Exercicio no arquivo de imagem.
 *******************************************************************************/
-import java.util.Scanner;
+/**
+ * Aluno
+ */
+public class Aluno extends Pessoa {
 
-public class Aluno extends Pessoa{
 	private int matricula;
 
-	//construtor
-	public Aluno(String nome, String sobrenome, int matricula){
-		super(nome,sobrenome);
-		this.matricula=matricula;
-	}
+	public Aluno(String nome, String sobrenome, int matricula) {
+		super(nome, sobrenome);
+		this.matricula = matricula;
 
-	//gets
+	}
+	//getters
 	public int getMatricula(){
-		return this.matricula;
+		return matricula;
 	}
 
-	//sets
-	public void setMatricula(int matricula){
+	//setters
+	public void setMatricula(int matricula) {
 		this.matricula = matricula;
 	}
+	
 }
